@@ -1,11 +1,16 @@
+# Iriduim Orbital Mechanics Toolkit (IOMT)
+# Written By Iridium33 (behzadxahedi@gmail.com)
+# 
+
+# Imports
 import numpy as np
 import time
-
 #import matplotlib.pyplot as plt
 #import matplotlib.animation as animation
 #from astropy.time import Time
 #from astroquery.jplhorizons import Horizons      
 
+# Defining class: TwoBodyEngine
 class TwoBodyEngine:
     
     def __init__(self, mu, step, timeEnd):
@@ -84,6 +89,7 @@ class TwoBodyEngine:
             print("V:", Vnew)
             print("T:", currentTime, "Sec", "\n")
 
+# Defining class: Planet
 class Planet:
 
     def __init__(self, name, mu):
@@ -94,13 +100,14 @@ class Planet:
         self.r = None                   # Current Location Vector
         self.v = None                   # Current Velocity Vector  
 
+# Defining class: SolarSystem
 """ class SolarSystem:
 
     def __init__(self, name, mu):
 
         # Solar System """
-         
 
+# Main Body
 t0 = time.time()
 print("\n")
 
