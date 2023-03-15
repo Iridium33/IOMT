@@ -31,7 +31,7 @@ class TwoBodyEngine:
 
         # Solar Radiation Pressure (Curtis page 695)
         self.nu = 1.0                   # Object Always in the sun
-        self.solarCosntant = 63.15e12   # Solar Constant W/Km2
+        self.solarConstant = 63.15e12   # Solar Constant W/Km2
         self.speedOfLight = 2.988e5     # Speed of light Km/s
         self.cr = 1.3                   # 1 for black, 2 for 100% reflective
         self.absorbingArea = 1.0e-6     # Abdsorbing area, Pi*R**2 for connonbell modal
@@ -55,7 +55,7 @@ class TwoBodyEngine:
 
         # Solar Radiation Pressure
         # DOES IT NEED -1 behind nu?
-        accelerationSRP = self.nu * (self.solarCosntant * pow(696.0 / np.linalg.norm(RHeliocentric), 2.0)) * self.cr * (1.0 / self.speedOfLight) * self.absorbingArea * (RHeliocentric / np.linalg.norm(RHeliocentric))
+        accelerationSRP = self.nu * (self.solarConstant * pow(696.0 / np.linalg.norm(RHeliocentric), 2.0)) * self.cr * (1.0 / self.speedOfLight) * self.absorbingArea * (RHeliocentric / np.linalg.norm(RHeliocentric))
         return accelerationSRP
 
     def thirdPlanetPerturbation(self, RHeliocentric, RThirdPlanet):
