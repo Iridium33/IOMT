@@ -1,5 +1,5 @@
 # Iriduim Orbital Mechanics Toolkit (IOMT)
-# Written By Iridium33 (behzadxahedi@gmail.com)
+# Written By Iridium33 (behzad.zahedi.edu@gmail.com)
 # 
 
 # Imports
